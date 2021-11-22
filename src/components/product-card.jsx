@@ -18,7 +18,6 @@ export function ProductCard({ product, eager }) {
     priceRangeV2,
     slug,
     images: [firstImage],
-    vendor,
     storefrontImages,
   } = product
 
@@ -66,7 +65,6 @@ export function ProductCard({ product, eager }) {
         )
       }
       <div className={productDetailsStyle}>
-        <div className={productVendorStyle}>{vendor}</div>
         <h2 as="h2" className={productHeadingStyle}>
           {title}
         </h2>
@@ -94,6 +92,5 @@ export const query = graphql`
         currencyCode
       }
     }
-    vendor
   }
 `
