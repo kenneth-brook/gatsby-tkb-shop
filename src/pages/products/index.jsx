@@ -11,7 +11,7 @@ export default function Products({ data: { products } }) {
     <Layout>
       <Seo title="All Products" />
       <h1 className={title}>Products</h1>
-      <ProductListing products={products.nodes} />
+      <ProductListing products={products.allShopifyProduct.edges.nodes} />
       {products.pageInfo.hasNextPage && (
         <MoreButton to={`/search#more`}>More products</MoreButton>
       )}
